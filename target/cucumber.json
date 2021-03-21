@@ -1,0 +1,75 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 5,
+        "name": "Demo scenario",
+        "description": "",
+        "id": "weather-information-for-given-location;demo-scenario",
+        "after": [
+          {
+            "result": {
+              "duration": 70491,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.AfterSeleniumTest()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 68316146,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User is on Screen A",
+            "match": {
+              "location": "stepDefinationWeather.performGiven()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 42137,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User clicks on link x",
+            "match": {
+              "location": "stepDefinationWeather.performWhen()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 33942,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User navigates to screen B",
+            "match": {
+              "location": "stepDefinationWeather.performThen()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 4,
+            "name": "@RegressionTest"
+          }
+        ]
+      }
+    ],
+    "name": "Weather information for given location",
+    "description": "\r\nFeature",
+    "id": "weather-information-for-given-location",
+    "keyword": "Feature",
+    "uri": "Weather.feature"
+  }
+]

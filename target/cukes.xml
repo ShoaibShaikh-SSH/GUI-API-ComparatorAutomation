@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="0.068463">
+<testcase classname="Weather information for given location" name="Demo scenario" time="0.068463">
+<system-out><![CDATA[Given User is on Screen A...................................................passed
+When User clicks on link x..................................................passed
+Then User navigates to screen B.............................................passed
+]]></system-out>
+</testcase>
+</testsuite>
