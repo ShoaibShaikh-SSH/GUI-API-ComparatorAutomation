@@ -20,7 +20,9 @@ public class Base {
 		FileInputStream fis=new FileInputStream("src/test/java/Cucumber/Automation/global.properties");
 		prop.load(fis);
 		System.setProperty("webdriver.chrome.driver", PROJECT_PATH + "/src/test/java/Cucumber/Automation/chromedriver");
-   	 	driver=new ChromeDriver();
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--disable-notifications");
+		driver=new ChromeDriver(options);
    	 
   		driver.get(prop.getProperty("url"));
    	 	return driver;

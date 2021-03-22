@@ -21,7 +21,7 @@ public class Hooks extends Base{
 	@After("@RegressionTest")
 	public void AfterSeleniumTest()
 	{
-		System.out.println("After Regression hook");
+		driver.close();
 	}
 
 	@Before("@WebTest")
