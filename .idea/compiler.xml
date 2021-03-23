@@ -7,9 +7,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="UImodule" />
+        <module name="APImodule" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="APImodule" target="1.8" />
       <module name="Automation" target="1.5" />
       <module name="UImodule" target="1.5" />
     </bytecodeTargetLevel>
