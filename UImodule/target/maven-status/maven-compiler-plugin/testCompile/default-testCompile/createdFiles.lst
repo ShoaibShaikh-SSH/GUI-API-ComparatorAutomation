@@ -1,5 +1,5 @@
 stepDefinations/stepDefinationWeather.class
 cucumberOptions/TestRunner.class
+Automation/Base.class
 pageObjects/ndtvHome.class
 stepDefinations/Hooks.class
-Cucumber/Automation/Base.class

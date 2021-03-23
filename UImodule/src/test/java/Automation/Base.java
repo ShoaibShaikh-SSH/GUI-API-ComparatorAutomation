@@ -1,4 +1,4 @@
-package Cucumber.Automation;
+package Automation;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -17,9 +17,9 @@ public class Base {
 	public WebDriver getDriver() throws IOException
 	{
 		prop=new Properties();
-		FileInputStream fis=new FileInputStream("src/test/java/Cucumber/Automation/global.properties");
+		FileInputStream fis=new FileInputStream("src/test/java/Automation/global.properties");
 		prop.load(fis);
-		System.setProperty("webdriver.chrome.driver", PROJECT_PATH + "/src/test/java/Cucumber/Automation/chromedriver");
+		System.setProperty("webdriver.chrome.driver", PROJECT_PATH + "/src/test/java/Automation/chromedriver");
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--disable-notifications");
 		driver=new ChromeDriver(options);
