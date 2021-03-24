@@ -14,8 +14,7 @@ public class WeatherByCityNameTest extends TestBase
     {
         super.TestBase();
     }
-    public static double createdPetID;
-    public static String createdPetIDString;
+    public static double temperatureFromAPI;
 
     @Story("Get weather information of a city by its name")
     @Feature("Weather endpoint")
@@ -32,10 +31,10 @@ public class WeatherByCityNameTest extends TestBase
 
         String responseString = response.asString();
 
-        createdPetID = JsonPath.read(responseString,"$.main.temp");
-        createdPetIDString = "/"+ String.valueOf(createdPetID);
+        temperatureFromAPI = JsonPath.read(responseString,"$.main.temp");
 
-        System.out.println("Temp value: "+createdPetID);
+        System.out.println("Temp value: "+temperatureFromAPI);
+        weatherObjectFromAPI.setTemperature(temperatureFromAPI);
 
 //        validatableResponse =
 //                response

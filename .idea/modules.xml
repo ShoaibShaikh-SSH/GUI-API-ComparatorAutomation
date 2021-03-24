@@ -5,6 +5,8 @@
       <module fileurl="file://$PROJECT_DIR$/APImodule/APImodule.iml" filepath="$PROJECT_DIR$/APImodule/APImodule.iml" />
       <module fileurl="file://$PROJECT_DIR$/Automation.iml" filepath="$PROJECT_DIR$/Automation.iml" />
       <module fileurl="file://$PROJECT_DIR$/UImodule/UImodule.iml" filepath="$PROJECT_DIR$/UImodule/UImodule.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WeatherObject/WeatherObject.iml" filepath="$PROJECT_DIR$/WeatherObject/WeatherObject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WeatherObjectComparator/WeatherObjectComparator.iml" filepath="$PROJECT_DIR$/WeatherObjectComparator/WeatherObjectComparator.iml" />
     </modules>
   </component>
 </project>

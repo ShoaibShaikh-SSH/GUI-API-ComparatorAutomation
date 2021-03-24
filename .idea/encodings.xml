@@ -5,6 +5,10 @@
     <file url="file://$PROJECT_DIR$/APImodule/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/UImodule/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/UImodule/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/WeatherObject/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/WeatherObject/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/WeatherObjectComparator/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/WeatherObjectComparator/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
   </component>
 </project>

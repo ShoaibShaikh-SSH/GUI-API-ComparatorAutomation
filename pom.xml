@@ -8,6 +8,8 @@
     <modules>
         <module>UImodule</module>
         <module>APImodule</module>
+        <module>WeatherObject</module>
+        <module>WeatherObjectComparator</module>
     </modules>
     <packaging>pom</packaging>
 

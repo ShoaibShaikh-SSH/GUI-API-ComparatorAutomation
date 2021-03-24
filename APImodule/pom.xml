@@ -12,7 +12,7 @@
     <groupId>com.apimodule.base</groupId>
     <artifactId>APImodule</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>Open Weather API automation</name>
+    <packaging>jar</packaging>
 
     <properties>
 

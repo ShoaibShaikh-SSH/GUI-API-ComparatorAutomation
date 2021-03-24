@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="147.037466">
-<testcase classname="Weather information for given location" name="Location Selection" time="90.872624">
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="100.469222">
+<testcase classname="Weather information for given location" name="Location Selection" time="57.565582">
 <system-out><![CDATA[Given User is one NDTV home page............................................passed
 When User expands header section............................................passed
 And User clicks on weather..................................................passed
@@ -10,7 +10,7 @@ When User types in the location.............................................pass
 Then User checks the location to Pin it.....................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Weather information for given location" name="Selected location information" time="56.164842">
+<testcase classname="Weather information for given location" name="Selected location information" time="42.90364">
 <system-out><![CDATA[Given User is one NDTV home page............................................passed
 When User expands header section............................................passed
 And User clicks on weather..................................................passed
