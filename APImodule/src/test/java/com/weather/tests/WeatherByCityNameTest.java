@@ -34,7 +34,7 @@ public class WeatherByCityNameTest extends TestBase
         temperatureFromAPI = JsonPath.read(responseString,"$.main.temp");
 
         System.out.println("Temp value: "+temperatureFromAPI);
-        weatherObjectFromAPI.setTemperature(temperatureFromAPI);
+        //weatherObjectFromAPI.setTemperature(temperatureFromAPI);
 
 //        validatableResponse =
 //                response
