@@ -1,5 +1,6 @@
 package com.weather.tests;
 
+import com.jayway.jsonpath.JsonPath;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import io.qameta.allure.Feature;
@@ -13,6 +14,8 @@ public class WeatherByCityNameTest extends TestBase
     {
         super.TestBase();
     }
+    public static double createdPetID;
+    public static String createdPetIDString;
 
     @Story("Get weather information of a city by its name")
     @Feature("Weather endpoint")
@@ -26,6 +29,14 @@ public class WeatherByCityNameTest extends TestBase
                         .queryParam("appid","7fe67bf08c80ded756e598d6f8fedaea")
                 .get("/weather");
         response.prettyPrint();
+
+        String responseString = response.asString();
+
+        createdPetID = JsonPath.read(responseString,"$.main.temp");
+        createdPetIDString = "/"+ String.valueOf(createdPetID);
+
+        System.out.println("Temp value: "+createdPetID);
+
 //        validatableResponse =
 //                response
 //                        .then()

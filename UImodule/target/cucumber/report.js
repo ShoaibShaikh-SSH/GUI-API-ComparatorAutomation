@@ -37,28 +37,28 @@ formatter.match({
   "location": "stepDefinationWeather.verifyIfUserIsOnHomePage()"
 });
 formatter.result({
-  "duration": 17180487234,
+  "duration": 67922251396,
   "status": "passed"
 });
 formatter.match({
   "location": "stepDefinationWeather.expandHeaderOnHomePage()"
 });
 formatter.result({
-  "duration": 3100479037,
+  "duration": 3109756318,
   "status": "passed"
 });
 formatter.match({
   "location": "stepDefinationWeather.clickOnWeatherLink()"
 });
 formatter.result({
-  "duration": 4872049753,
+  "duration": 9591242520,
   "status": "passed"
 });
 formatter.match({
   "location": "stepDefinationWeather.verifyIfWeatherSectionIsOpened()"
 });
 formatter.result({
-  "duration": 3009886232,
+  "duration": 3008500981,
   "status": "passed"
 });
 formatter.scenario({
@@ -94,25 +94,25 @@ formatter.match({
   "location": "stepDefinationWeather.verifyCurrentPage()"
 });
 formatter.result({
-  "duration": 3006298141,
+  "duration": 3007181607,
   "status": "passed"
 });
 formatter.match({
   "location": "stepDefinationWeather.searchLocation()"
 });
 formatter.result({
-  "duration": 2079995984,
+  "duration": 2085544441,
   "status": "passed"
 });
 formatter.match({
   "location": "stepDefinationWeather.checkIfLocationSelected()"
 });
 formatter.result({
-  "duration": 2017594971,
+  "duration": 2025232709,
   "status": "passed"
 });
 formatter.after({
-  "duration": 126501800,
+  "duration": 122914313,
   "status": "passed"
 });
 formatter.background({
@@ -146,28 +146,28 @@ formatter.match({
   "location": "stepDefinationWeather.verifyIfUserIsOnHomePage()"
 });
 formatter.result({
-  "duration": 18484786336,
+  "duration": 38776489038,
   "status": "passed"
 });
 formatter.match({
   "location": "stepDefinationWeather.expandHeaderOnHomePage()"
 });
 formatter.result({
-  "duration": 3090524500,
+  "duration": 3107861245,
   "status": "passed"
 });
 formatter.match({
   "location": "stepDefinationWeather.clickOnWeatherLink()"
 });
 formatter.result({
-  "duration": 4748836198,
+  "duration": 5004862160,
   "status": "passed"
 });
 formatter.match({
   "location": "stepDefinationWeather.verifyIfWeatherSectionIsOpened()"
 });
 formatter.result({
-  "duration": 3013122161,
+  "duration": 3011370409,
   "status": "passed"
 });
 formatter.scenario({
@@ -203,25 +203,25 @@ formatter.match({
   "location": "stepDefinationWeather.verifyIfLocationSelected()"
 });
 formatter.result({
-  "duration": 2020206463,
+  "duration": 2021129087,
   "status": "passed"
 });
 formatter.match({
   "location": "stepDefinationWeather.ClickOnLocationOnMap()"
 });
 formatter.result({
-  "duration": 2052824660,
+  "duration": 2062126778,
   "status": "passed"
 });
 formatter.match({
   "location": "stepDefinationWeather.GetInformationOfLocationOnMap()"
 });
 formatter.result({
-  "duration": 2098129222,
+  "duration": 2099451126,
   "status": "passed"
 });
 formatter.after({
-  "duration": 134956015,
+  "duration": 81552441,
   "status": "passed"
 });
 });
