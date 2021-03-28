@@ -1,2 +1,6 @@
-##.idea/*.iml
-##*/target/**
+
+*/target/**
+/.idea/
+/.settings/
+/APImodule/allure-results/
+/WeatherObjectComparator/allure-results/
