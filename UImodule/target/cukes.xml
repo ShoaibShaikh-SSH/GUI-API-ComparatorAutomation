@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="217.272628">
-<testcase classname="Weather information for given location" name="Location Selection" time="217.272628">
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="42.231195">
+<testcase classname="Weather information for given location" name="Location Selection" time="42.231195">
 <system-out><![CDATA[Given User is one NDTV home page............................................passed
 When User expands header section............................................passed
 And User clicks on weather..................................................passed

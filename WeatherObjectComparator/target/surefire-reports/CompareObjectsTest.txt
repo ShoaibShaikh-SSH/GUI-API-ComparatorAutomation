@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
-Test set: CompareObjectsCopyTest
+Test set: CompareObjectsTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.809 sec - in CompareObjectsCopyTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.224 sec - in CompareObjectsTest
