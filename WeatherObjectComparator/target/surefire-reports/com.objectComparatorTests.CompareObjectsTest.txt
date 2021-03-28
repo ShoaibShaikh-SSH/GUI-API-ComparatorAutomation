@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.objectComparatorTests.CompareObjectsTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.933 sec - in com.objectComparatorTests.CompareObjectsTest

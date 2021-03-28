@@ -1,2 +1,2 @@
-com/maventest/CreatedobjectProviderTest.class
-com/maventest/TestBaseMain.class
+com/openWeather/OpenWeatherAPIBase.class
+com/openWeather/WeatherObjectCreator.class

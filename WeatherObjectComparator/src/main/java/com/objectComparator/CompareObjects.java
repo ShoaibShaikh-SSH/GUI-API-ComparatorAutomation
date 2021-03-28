@@ -2,11 +2,11 @@ package com.objectComparator;
 
 
 import DataModel.TemperaturePoJo;
-import com.maventest.CreatedobjectProviderTest;
+import com.openWeather.WeatherObjectCreator;
 
-public class CompareObjects extends CreatedobjectProviderTest
+public class CompareObjects extends WeatherObjectCreator
 {
-    public CreatedobjectProviderTest tempObjectFromAPI = new CreatedobjectProviderTest();
+    public WeatherObjectCreator tempObjectFromAPI = new WeatherObjectCreator();
 
     public TemperaturePoJo TempPoJo = new TemperaturePoJo();
 
