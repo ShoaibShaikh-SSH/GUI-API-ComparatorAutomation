@@ -24,4 +24,5 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>
+	<classpathentry kind="var" path="M2_REPO/com/maventest/CreatedObjectProvider/1.0-SNAPSHOT/APImodule-1.0-SNAPSHOT.jar"/>
 </classpath>

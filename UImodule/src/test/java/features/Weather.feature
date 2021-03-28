@@ -13,11 +13,12 @@ Feature: Weather information for given location
     When User types in the location
     Then User checks the location to Pin it
 
-  @RegressionTest
-  Scenario: Selected location information
-    Given User has selected location on weather section
-    When User clicks on the location
-    Then User sees the weather information for that location
+#  @RegressionTest
+#  Scenario: Selected location information
+#    Given User has selected location on weather section
+#    When User clicks on the location
+#    Then User sees the weather information for that location
+#    And User puts that information as Weather object
 
 
 

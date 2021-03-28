@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="16" failures="0" name="cucumberOptions.TestRunner" time="0.282" errors="0" skipped="0">
+<testsuite tests="8" failures="0" name="cucumberOptions.TestRunner" time="0.084" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_271.jdk/Contents/Home/jre/lib"/>
     <property name="java.vm.version" value="25.271-b09"/>
     <property name="gopherProxySet" value="false"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
-    <property name="maven.multiModuleProjectDirectory" value="/Users/shoaibshaikh/Documents/Personal/cucumberProject/AutomationProject /Automation"/>
+    <property name="maven.multiModuleProjectDirectory" value="/Users/shoaibshaikh/Documents/Personal/cucumberProject/WithModules/GUI-API-ComparatorAutomation"/>
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
     <property name="path.separator" value=":"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
@@ -16,7 +16,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value="unknown"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="/Users/shoaibshaikh/Documents/Personal/cucumberProject/AutomationProject /Automation"/>
+    <property name="user.dir" value="/Users/shoaibshaikh/Documents/Personal/cucumberProject/WithModules/GUI-API-ComparatorAutomation"/>
     <property name="java.runtime.version" value="1.8.0_271-b09"/>
     <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
     <property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_271.jdk/Contents/Home/jre/lib/endorsed"/>
@@ -46,7 +46,7 @@
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_271.jdk/Contents/Home/jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean test"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean install"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="en"/>
     <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
@@ -64,20 +64,12 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="Scenario: Location Selection" name="Given User is one NDTV home page" time="0.003"/>
+  <testcase classname="Scenario: Location Selection" name="Given User is one NDTV home page" time="0.002"/>
   <testcase classname="Scenario: Location Selection" name="When User expands header section" time="0"/>
   <testcase classname="Scenario: Location Selection" name="And User clicks on weather" time="0"/>
   <testcase classname="Scenario: Location Selection" name="Then Weather section is opened" time="0"/>
   <testcase classname="Scenario: Location Selection" name="Given User is one NDTV weather section" time="0"/>
   <testcase classname="Scenario: Location Selection" name="When User types in the location" time="0"/>
   <testcase classname="Scenario: Location Selection" name="Then User checks the location to Pin it" time="0"/>
-  <testcase classname="Scenario: Location Selection" name="Scenario: Location Selection" time="0.142"/>
-  <testcase classname="Scenario: Selected location information" name="Given User is one NDTV home page" time="0.001"/>
-  <testcase classname="Scenario: Selected location information" name="When User expands header section" time="0"/>
-  <testcase classname="Scenario: Selected location information" name="And User clicks on weather" time="0"/>
-  <testcase classname="Scenario: Selected location information" name="Then Weather section is opened" time="0"/>
-  <testcase classname="Scenario: Selected location information" name="Given User has selected location on weather section" time="0"/>
-  <testcase classname="Scenario: Selected location information" name="When User clicks on the location" time="0"/>
-  <testcase classname="Scenario: Selected location information" name="Then User sees the weather information for that location" time="0"/>
-  <testcase classname="Scenario: Selected location information" name="Scenario: Selected location information" time="0.136"/>
+  <testcase classname="Scenario: Location Selection" name="Scenario: Location Selection" time="0.082"/>
 </testsuite>

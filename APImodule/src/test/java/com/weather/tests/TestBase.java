@@ -1,8 +1,8 @@
 package com.weather.tests;
 
-//import DataCreationFromModel.TemperatureObjectCreator;
-//import DataModel.TemperaturePoJo;
-import com.github.javafaker.Faker;
+import DataCreationFromModel.TemperatureObjectCreator;
+import DataModel.TemperaturePoJo;
+
 import io.restassured.response.Response;
 import io.restassured.response.ValidatableResponse;
 
@@ -12,10 +12,10 @@ public class TestBase
 {
     public static Response response;
     ValidatableResponse validatableResponse;
-    public static Faker fake = new Faker();
 
-   // public static TemperaturePoJo weatherObjectFromAPI;
 
+    public static TemperaturePoJo weatherObjectFromAPI = new TemperaturePoJo();
+    public static TemperatureObjectCreator objCreater = new TemperatureObjectCreator();
 
     public void TestBase()
     {

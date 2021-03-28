@@ -37,28 +37,28 @@ formatter.match({
   "location": "stepDefinationWeather.verifyIfUserIsOnHomePage()"
 });
 formatter.result({
-  "duration": 15697207336,
+  "duration": 199141205964,
   "status": "passed"
 });
 formatter.match({
   "location": "stepDefinationWeather.expandHeaderOnHomePage()"
 });
 formatter.result({
-  "duration": 3105628465,
+  "duration": 3103408165,
   "status": "passed"
 });
 formatter.match({
   "location": "stepDefinationWeather.clickOnWeatherLink()"
 });
 formatter.result({
-  "duration": 4219892152,
+  "duration": 4826587932,
   "status": "passed"
 });
 formatter.match({
   "location": "stepDefinationWeather.verifyIfWeatherSectionIsOpened()"
 });
 formatter.result({
-  "duration": 3010123722,
+  "duration": 3012532636,
   "status": "passed"
 });
 formatter.scenario({
@@ -94,134 +94,25 @@ formatter.match({
   "location": "stepDefinationWeather.verifyCurrentPage()"
 });
 formatter.result({
-  "duration": 3006923014,
+  "duration": 3005281448,
   "status": "passed"
 });
 formatter.match({
   "location": "stepDefinationWeather.searchLocation()"
 });
 formatter.result({
-  "duration": 2080806039,
+  "duration": 2082422714,
   "status": "passed"
 });
 formatter.match({
   "location": "stepDefinationWeather.checkIfLocationSelected()"
 });
 formatter.result({
-  "duration": 2021428285,
+  "duration": 2021309411,
   "status": "passed"
 });
 formatter.after({
-  "duration": 141225927,
-  "status": "passed"
-});
-formatter.background({
-  "line": 4,
-  "name": "",
-  "description": "",
-  "type": "background",
-  "keyword": "Background"
-});
-formatter.step({
-  "line": 5,
-  "name": "User is one NDTV home page",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 6,
-  "name": "User expands header section",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 7,
-  "name": "User clicks on weather",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 8,
-  "name": "Weather section is opened",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "stepDefinationWeather.verifyIfUserIsOnHomePage()"
-});
-formatter.result({
-  "duration": 11918025094,
-  "status": "passed"
-});
-formatter.match({
-  "location": "stepDefinationWeather.expandHeaderOnHomePage()"
-});
-formatter.result({
-  "duration": 3104768249,
-  "status": "passed"
-});
-formatter.match({
-  "location": "stepDefinationWeather.clickOnWeatherLink()"
-});
-formatter.result({
-  "duration": 4073378710,
-  "status": "passed"
-});
-formatter.match({
-  "location": "stepDefinationWeather.verifyIfWeatherSectionIsOpened()"
-});
-formatter.result({
-  "duration": 3011909103,
-  "status": "passed"
-});
-formatter.scenario({
-  "line": 17,
-  "name": "Selected location information",
-  "description": "",
-  "id": "weather-information-for-given-location;selected-location-information",
-  "type": "scenario",
-  "keyword": "Scenario",
-  "tags": [
-    {
-      "line": 16,
-      "name": "@RegressionTest"
-    }
-  ]
-});
-formatter.step({
-  "line": 18,
-  "name": "User has selected location on weather section",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 19,
-  "name": "User clicks on the location",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 20,
-  "name": "User sees the weather information for that location",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "stepDefinationWeather.verifyIfLocationSelected()"
-});
-formatter.result({
-  "duration": 2022812550,
-  "status": "passed"
-});
-formatter.match({
-  "location": "stepDefinationWeather.ClickOnLocationOnMap()"
-});
-formatter.result({
-  "duration": 2072485147,
-  "status": "passed"
-});
-formatter.match({
-  "location": "stepDefinationWeather.GetInformationOfLocationOnMap()"
-});
-formatter.result({
-  "duration": 2101590779,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 135415154,
+  "duration": 79879561,
   "status": "passed"
 });
 });

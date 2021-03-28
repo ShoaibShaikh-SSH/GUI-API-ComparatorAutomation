@@ -1,6 +1,8 @@
 package stepDefinations;
 
 import Automation.Base;
+import DataCreationFromModel.TemperatureObjectCreator;
+import DataModel.TemperaturePoJo;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -20,6 +22,10 @@ public class stepDefinationWeather extends Base {
 
     WebDriver localDriver = getDriver();
     ndtvHome ndtv = new ndtvHome(localDriver);
+
+    public static TemperaturePoJo weatherObjectFromAPI = new TemperaturePoJo();
+    public static TemperatureObjectCreator objCreater = new TemperatureObjectCreator();
+    public static String temperatureFromUI;
     public stepDefinationWeather() throws IOException {
     }
 
@@ -112,7 +118,18 @@ public class stepDefinationWeather extends Base {
             System.out.println("Information: "+weatherInformationCompleteStrings.get(i).getText());
             tempStringArray = weatherInformationCompleteStrings.get(i).getText().split(":");
             weatherInformation.put(tempStringArray[0],tempStringArray[1]);
+            if(tempStringArray[0].equalsIgnoreCase("Temp in Fahrenheit"))
+            {
+                temperatureFromUI = tempStringArray[1];
+                System.out.println("Temp for Obj: "+temperatureFromUI);
+            }
             tempStringArray=null;
         }
+    }
+    @Then("^User puts that information as Weather object$")
+    public void createTemObject()
+    {
+        weatherObjectFromAPI=objCreater.temperatureObjCreator(11.22);
+        System.out.println("weather object from UI: "+weatherObjectFromAPI);
     }
 }
