@@ -4,3 +4,4 @@
 /.settings/
 /APImodule/allure-results/
 /WeatherObjectComparator/allure-results/
+.DS_Store
