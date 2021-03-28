@@ -1,135 +1,88 @@
 package stepDefinations;
 
-import Automation.Base;
-import DataCreationFromModel.TemperatureObjectCreator;
-import DataModel.TemperaturePoJo;
+import com.openWeatherUI.stepDefinationsUI;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import cucumber.api.junit.Cucumber;
 import org.junit.runner.RunWith;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import pageObjects.ndtvHome;
-
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
+
 
 @RunWith(Cucumber.class)
-public class stepDefinationWeather extends Base {
+public class stepDefinationWeather
+{
+    stepDefinationsUI steps = new stepDefinationsUI();
 
-    WebDriver localDriver = getDriver();
-    ndtvHome ndtv = new ndtvHome(localDriver);
-
-    public static TemperaturePoJo weatherObjectFromAPI = new TemperaturePoJo();
-    public static TemperatureObjectCreator objCreater = new TemperatureObjectCreator();
-    public static String temperatureFromUI;
     public stepDefinationWeather() throws IOException {
     }
 
     @When("^User is one NDTV home page$")
     public void verifyIfUserIsOnHomePage() throws IOException, InterruptedException {
 
-        localDriver.manage().window().maximize();
-        Thread.sleep(2000);
-        try {
-            ndtv.getNotificationAllow().click();
-        }
-        catch (Exception e)
-        {
-            //e.printStackTrace();
-            System.out.println("Exception caught !");
-        }
-        Thread.sleep(2000);
+        steps.getUserToHomePage();
 
         System.out.println("Home page checked !");
     }
 
     @Then("^User expands header section$")
-    public void expandHeaderOnHomePage() throws InterruptedException {
-        Thread.sleep(3000);
-        ndtv.getMoreHeader().click();
+    public void HeaderOnHomePage() throws InterruptedException
+    {
+        steps.expandHeaderOnHomePage();
     }
 
     @Given("^User clicks on weather$")
-    public void clickOnWeatherLink() throws Throwable {
-        Thread.sleep(3000);
-        ndtv.getWeatherNavigation().click();
-
+    public void getUsertoWeatherSection() throws Throwable {
+        steps.clickOnWeatherLink();
     }
 
     @Given("^Weather section is opened$")
     public void verifyIfWeatherSectionIsOpened() throws InterruptedException {
-        Thread.sleep(3000);
-        driver.getTitle().equalsIgnoreCase("NDTV Weather - Weather in your Indian City");
+        steps.fetchCurrentWindowTitle();
     }
 
     @Given("^User is one NDTV weather section$")
     public void verifyCurrentPage() throws InterruptedException {
-        verifyIfWeatherSectionIsOpened();
+        steps.fetchCurrentWindowTitle();
     }
 
     @Given("^User types in the location$")
-    public void searchLocation() throws InterruptedException {
-        Thread.sleep(2000);
-        ndtv.getLocationSearchBox().sendKeys("Bengaluru");
+    public void searchGivenLocation() throws InterruptedException {
+        steps.searchLocation();
     }
 
     @Given("^User checks the location to Pin it$")
-    public void checkIfLocationSelected() throws InterruptedException {
-        Thread.sleep(2000);
-        if(ndtv.getSearchedLocation().getCssValue("checked").equalsIgnoreCase("checked"))
-        {
-            System.out.println("Location is already selected: "+ndtv.getSearchedLocation().getCssValue("checked") );
-
-        }
+    public void verifySelectedLocation() throws InterruptedException
+    {
+        steps.checkIfLocationSelected();
     }
 
     @Given("^User has selected location on weather section$")
     public void verifyIfLocationSelected() throws InterruptedException
     {
-        Thread.sleep(2000);
-        if(ndtv.getSearchedLocation().getCssValue("checked").equalsIgnoreCase("checked"))
-        {
-            System.out.println("Location is already selected: "+ndtv.getSearchedLocation().getCssValue("checked") );
-
-        }
-
+        steps.checkIfLocationSelected();
     }
     @Given("^User clicks on the location$")
     public void ClickOnLocationOnMap() throws InterruptedException
     {
-        Thread.sleep(2000);
-        ndtv.getSearchedLocationOnMap().click();
-
+        steps.ClickgivenLocationOnMap();
     }
     @Given("^User sees the weather information for that location$")
-    public void GetInformationOfLocationOnMap() throws InterruptedException
+    public void getInformationOfLocationOnMap() throws InterruptedException
     {
-        Thread.sleep(2000);
-        HashMap<String,String> weatherInformation = new HashMap<String, String>();
-        List<WebElement> weatherInformationCompleteStrings = new ArrayList<WebElement>();
-        weatherInformationCompleteStrings = ndtv.getSearchedLocationInformationOnMap();
-        String[] tempStringArray;
-        for(int i=0;i<weatherInformationCompleteStrings.size();i++)
-        {
-            System.out.println("Information: "+weatherInformationCompleteStrings.get(i).getText());
-            tempStringArray = weatherInformationCompleteStrings.get(i).getText().split(":");
-            weatherInformation.put(tempStringArray[0],tempStringArray[1]);
-            if(tempStringArray[0].equalsIgnoreCase("Temp in Fahrenheit"))
-            {
-                temperatureFromUI = tempStringArray[1];
-                System.out.println("Temp for Obj: "+temperatureFromUI);
-            }
-            tempStringArray=null;
-        }
+        steps.fetchInformationOfLocationOnMap();
+    }
+    public HashMap<String,String> GetInformationOfLocationOnMap() throws InterruptedException
+    {
+        return steps.GetInformationOfGivenLocationOnMap();
     }
     @Then("^User puts that information as Weather object$")
     public void createTemObject()
     {
-        weatherObjectFromAPI=objCreater.temperatureObjCreator(11.22);
-        System.out.println("weather object from UI: "+weatherObjectFromAPI);
+       // weatherObjectFromAPI=objCreater.temperatureObjCreator(11.22);
+        //System.out.println("weather object from UI: "+weatherObjectFromAPI);
+        System.out.println("Step to create temp obj");
     }
+
 }

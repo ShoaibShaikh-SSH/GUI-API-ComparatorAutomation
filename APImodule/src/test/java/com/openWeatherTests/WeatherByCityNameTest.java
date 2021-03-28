@@ -1,6 +1,6 @@
 package com.openWeatherTests;
 
-import com.openWeather.OpenWeatherAPIBase;
+import com.openWeatherAPI.OpenWeatherAPIBase;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import io.qameta.allure.Feature;
@@ -25,6 +25,7 @@ public class WeatherByCityNameTest extends OpenWeatherAPIBase
                 given().log().all()
                         .queryParam("q","Bengaluru")
                         .queryParam("appid","7fe67bf08c80ded756e598d6f8fedaea")
+                        .queryParam("units","imperial")
                         .get("/weather");
         response.prettyPrint();
 
