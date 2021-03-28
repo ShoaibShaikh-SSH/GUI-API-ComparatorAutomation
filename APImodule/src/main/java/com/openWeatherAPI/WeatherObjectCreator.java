@@ -1,15 +1,14 @@
 package com.openWeatherAPI;
 
-import DataModel.TemperaturePoJo;
+import DataModel.WeatherPoJo;
 import com.jayway.jsonpath.JsonPath;
-//import org.junit.Test;
 
 import static io.restassured.RestAssured.given;
 
 public class WeatherObjectCreator extends OpenWeatherAPIBase
 {
     public static double temperatureFromAPI;
-    public TemperaturePoJo getWeatherInfoByName()
+    public WeatherPoJo getWeatherInfoByName()
     {
         super.OpenWeatherAPIBase();
         response =

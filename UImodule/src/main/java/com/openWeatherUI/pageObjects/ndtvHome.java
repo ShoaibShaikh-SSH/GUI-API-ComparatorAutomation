@@ -1,13 +1,22 @@
 package com.openWeatherUI.pageObjects;
 
+import com.openWeatherUI.OpenWeatherUIBase;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import java.io.IOException;
 import java.util.List;
+import java.util.Properties;
 
-public class ndtvHome {
+public class ndtvHome
+{
 	public WebDriver driver;
+	public static Properties prop;
+	String xpathPart1 ;
+	String xpathPart2 ;
+	String fullPath;
+
 
 	public ndtvHome(WebDriver driver)
 	{
@@ -21,9 +30,9 @@ public class ndtvHome {
 
 	By LocationSearchBox=By.id("searchBox");
 
-	By SearchedLocation=By.id("Bengaluru");
+	//By SearchedLocation=By.id("Bengaluru");
 
-	By SearchedLocationOnMap=By.xpath("//div[@class='cityText'][text()='Bengaluru']");
+
 
 	By SearchedLocationInformationOnMap=By.xpath("//span[@class='heading']/b");
 
@@ -46,13 +55,21 @@ public class ndtvHome {
 	{
 		return driver.findElement(LocationSearchBox);
 	}
-	public WebElement getSearchedLocation()
+	public WebElement getSearchedLocation(String cityName)
 	{
-		return driver.findElement(SearchedLocation);
+//		xpathPart1 = "//div[@class='cityText'][text()='";
+//		xpathPart2 = "']";
+//		fullPath = xpathPart1+cityName+xpathPart2;
+//		System.out.println("xpath: "+fullPath);
+		return driver.findElement(By.id(cityName));
 	}
-	public WebElement getSearchedLocationOnMap()
+	public WebElement getSearchedLocationOnMap(String cityName)
 	{
-		return driver.findElement(SearchedLocationOnMap);
+		xpathPart1 = "//div[@class='cityText'][text()='";
+		xpathPart2 = "']";
+		fullPath = xpathPart1+cityName+xpathPart2;
+		System.out.println("xpath: "+fullPath);
+		return driver.findElement(By.xpath(fullPath));
 	}
 	public List<WebElement> getSearchedLocationInformationOnMap()
 	{
