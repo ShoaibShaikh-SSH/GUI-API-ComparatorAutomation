@@ -4,7 +4,7 @@ import DataModel.TemperaturePoJo;
 
 public class TemperatureObjectCreator
 {
-    public static TemperaturePoJo temperatureObject = new TemperaturePoJo();
+    public static TemperaturePoJo temperatureObject;
 
     public TemperaturePoJo temperatureObjCreator(double temp)
     {
