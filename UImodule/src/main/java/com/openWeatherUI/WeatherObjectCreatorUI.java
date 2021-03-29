@@ -12,12 +12,12 @@ public class WeatherObjectCreatorUI
     }
 
     public static WeatherObjectCreator objCreater = new WeatherObjectCreator();
-    public static stepDefinationsUI UIstep;
+    public static stepDefinationsBase UIstep;
 
 
     public WeatherPoJo getWeatherInfoByNameonUI() throws Throwable {
 
-        UIstep= new stepDefinationsUI();
+        UIstep= new stepDefinationsBase();
         HashMap<String, String> weatherInformationfromMapUI = new HashMap<String, String>();
         double temperatureFromUI;
         UIstep.getUserToHomePage();

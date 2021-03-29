@@ -1,6 +1,6 @@
 package stepDefinations;
 
-import com.openWeatherUI.stepDefinationsUI;
+import com.openWeatherUI.stepDefinationsBase;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -13,7 +13,7 @@ import java.util.HashMap;
 @RunWith(Cucumber.class)
 public class stepDefinationWeather
 {
-    stepDefinationsUI steps = new stepDefinationsUI();
+    stepDefinationsBase steps = new stepDefinationsBase();
 
     public stepDefinationWeather() throws IOException {
     }
@@ -69,7 +69,7 @@ public class stepDefinationWeather
         steps.ClickgivenLocationOnMap();
     }
     @Given("^User sees the weather information for that location$")
-    public void getInformationOfLocationOnMap() throws InterruptedException
+    public void verifyWeatherInformationOfLocationOnMap() throws InterruptedException
     {
         steps.fetchInformationOfLocationOnMap();
     }
@@ -77,12 +77,12 @@ public class stepDefinationWeather
     {
         return steps.GetInformationOfGivenLocationOnMap();
     }
-    @Then("^User puts that information as Weather object$")
-    public void createTemObject()
-    {
-       // weatherObjectFromAPI=objCreater.temperatureObjCreator(11.22);
-        //System.out.println("weather object from UI: "+weatherObjectFromAPI);
-        System.out.println("Step to create temp obj");
-    }
+//    @Then("^User puts that information as Weather object$")
+//    public void createTemObject()
+//    {
+//       // weatherObjectFromAPI=objCreater.temperatureObjCreator(11.22);
+//        //System.out.println("weather object from UI: "+weatherObjectFromAPI);
+//        System.out.println("Step to create temp obj");
+//    }
 
 }
