@@ -16,14 +16,13 @@ public class UIBase {
 	public static WebDriver driver;
 	public static Properties prop;
 	final static String PROJECT_PATH = System.getProperty("user.dir");
-	//public static WebDriverWait wait=new WebDriverWait(driver, 5);
-	// Explicit wait - This will be applied case to case basis on individual web elements, It provides a more flexible & intelligent way to wait.
-	//public WebDriverWait wait;
+	//final static String PropertiesFilePath = null;
 	public WebDriver getDriver() throws IOException {
 		prop=new Properties();
-		FileInputStream fis=new FileInputStream("src/test/resources/global.properties");
+		FileInputStream fis=new FileInputStream( PROJECT_PATH +"/src/test/java/com/resources/UI.properties");
 		prop.load(fis);
-		System.setProperty("webdriver.chrome.driver", PROJECT_PATH + "/src/test/resources/chromedriver");
+		//System.setProperty("webdriver.chrome.driver", PROJECT_PATH + "/src/test/resources/chromedriver");
+		System.setProperty("webdriver.chrome.driver", PROJECT_PATH + "/src/test/java/com/resources/chromedriver");
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--disable-notifications");
 		driver=new ChromeDriver(options);

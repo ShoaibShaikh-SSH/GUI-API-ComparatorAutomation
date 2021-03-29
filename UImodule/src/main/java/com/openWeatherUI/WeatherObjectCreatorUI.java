@@ -15,21 +15,25 @@ public class WeatherObjectCreatorUI
     public static stepDefinationsBase UIstep;
 
 
-    public WeatherPoJo getWeatherInfoByNameonUI() throws Throwable {
+    public WeatherPoJo getWeatherInfoByNameonUI() throws Throwable
+    {
+        double temperatureFromUI = 0.0;
+        try {
+            UIstep = new stepDefinationsBase();
+            HashMap<String, String> weatherInformationfromMapUI = new HashMap<String, String>();
 
-        UIstep= new stepDefinationsBase();
-        HashMap<String, String> weatherInformationfromMapUI = new HashMap<String, String>();
-        double temperatureFromUI;
-        UIstep.getUserToHomePage();
-        UIstep.expandHeaderOnHomePage();
-        UIstep.clickOnWeatherLink();
-        UIstep.searchLocation();
-        UIstep.checkIfLocationSelected();
-        UIstep.ClickgivenLocationOnMap();
-        weatherInformationfromMapUI = UIstep.GetInformationOfGivenLocationOnMap();
-        temperatureFromUI = Double.parseDouble(weatherInformationfromMapUI.get("Temp in Fahrenheit"));
-        System.out.println("Temperature from UI: "+temperatureFromUI);
-        UIstep.closeTheSession();
+            UIstep.getUserToHomePage();
+            UIstep.expandHeaderOnHomePage();
+            UIstep.clickOnWeatherLink();
+            UIstep.searchLocation();
+            UIstep.checkIfLocationSelected();
+            UIstep.ClickgivenLocationOnMap();
+            weatherInformationfromMapUI = UIstep.GetInformationOfGivenLocationOnMap();
+            temperatureFromUI = Double.parseDouble(weatherInformationfromMapUI.get("Temp in Fahrenheit"));
+            System.out.println("Temperature from UI: " + temperatureFromUI);
+            UIstep.closeTheSession();
+        }
+        catch(Exception exception){exception.printStackTrace();}
         return objCreater.temperatureObjCreator(temperatureFromUI);
     }
 

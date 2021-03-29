@@ -24,7 +24,7 @@ public class stepDefinationsBase extends UIBase
     public stepDefinationsBase() throws IOException
     {
         prop=new Properties();
-        FileInputStream fis=new FileInputStream("src/test/resources/global.properties");
+        FileInputStream fis=new FileInputStream(PROJECT_PATH +"/src/test/java/com/resources/UI.properties");
         prop.load(fis);
     }
 

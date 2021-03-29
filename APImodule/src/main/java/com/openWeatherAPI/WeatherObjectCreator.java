@@ -5,12 +5,12 @@ import com.jayway.jsonpath.JsonPath;
 
 import static io.restassured.RestAssured.given;
 
-public class WeatherObjectCreator extends OpenWeatherAPIBase
+public class WeatherObjectCreator extends APIBase
 {
     public static double temperatureFromAPI;
     public WeatherPoJo getWeatherInfoByName()
     {
-        super.OpenWeatherAPIBase();
+        super.APIBase();
         response =
                 given().log().all()
                         .queryParam("q","Bengaluru")
