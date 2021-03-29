@@ -67,6 +67,11 @@
         <artifactId>APImodule</artifactId>
         <version>1.0-SNAPSHOT</version>
     </dependency>
+    <dependency>
+        <groupId>com.uimodule.base</groupId>
+        <artifactId>UImodule</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </dependency>
     </dependencies>
 
     <build>

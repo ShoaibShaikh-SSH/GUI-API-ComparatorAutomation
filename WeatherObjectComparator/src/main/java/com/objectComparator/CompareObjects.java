@@ -1,17 +1,28 @@
 package com.objectComparator;
 
 
-import DataModel.TemperaturePoJo;
-import com.openWeather.WeatherObjectCreator;
+import DataModel.WeatherPoJo;
 
-public class CompareObjects extends WeatherObjectCreator
+import java.io.IOException;
+import java.text.DecimalFormat;
+
+
+public class CompareObjects
 {
-    public WeatherObjectCreator tempObjectFromAPI = new WeatherObjectCreator();
+    double temperatureFromUI;
+    double temperatureFromAPI;
+    DecimalFormat decimalFormat;
 
-    public TemperaturePoJo TempPoJo = new TemperaturePoJo();
+    public CompareObjects() throws IOException {
+    }
 
-    public void compareWeatherObjects(TemperaturePoJo objectAPI,TemperaturePoJo objectUI)
+    public double compareTemperatureAttribute(WeatherPoJo objectAPI, WeatherPoJo objectUI)
     {
-        System.out.println("Comparison of object: "+objectAPI+" with another object: "+objectUI);
+        temperatureFromUI=objectUI.getTemperature();
+        temperatureFromAPI=objectAPI.getTemperature();
+
+        decimalFormat = new DecimalFormat("###.###");
+
+        return Double.max(temperatureFromUI,temperatureFromAPI)-Double.min(temperatureFromUI,temperatureFromAPI);
     }
 }

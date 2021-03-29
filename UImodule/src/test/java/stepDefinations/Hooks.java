@@ -1,10 +1,10 @@
 package stepDefinations;
 
-import Automation.Base;
+import com.openWeatherUI.OpenWeatherUIBase;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 
-public class Hooks extends Base{
+public class Hooks extends OpenWeatherUIBase {
 
 
 	@Before("@MobileTest")
