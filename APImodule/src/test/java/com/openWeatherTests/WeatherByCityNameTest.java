@@ -26,7 +26,8 @@ public class WeatherByCityNameTest extends APIBase
     @Feature("Weather endpoint")
     @Test
     @DisplayName("Fetch weather information by city name")
-    public void getWeatherInfoByNameTest() throws IOException {
+    public void getWeatherInfoByNameTest() throws IOException
+    {
         testProperties = initApiProperties();
 
         HashMap<String,String> queryParams = new HashMap<>();
@@ -35,15 +36,14 @@ public class WeatherByCityNameTest extends APIBase
         queryParams.put(testProperties.getProperty("units"),testProperties.getProperty("imperial"));
 
         response = weatherRequests.getWeatherByStatus(queryParams);
-        response.prettyPrint();
+
         validatableResponse =
                 response
                         .then()
                         .assertThat()
                         .statusCode(200);
 
-        Assertions.assertEquals(testProperties.getProperty("ExpectedIDforGivenCity"), JsonPath.read(response.asString(), "$.weather[0].id").toString());
-
+        Assertions.assertEquals(testProperties.getProperty("ExpectedIDforGivenCity"), JsonPath.read(response.asString(), "$.id").toString());
     }
 
 }

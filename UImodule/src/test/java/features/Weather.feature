@@ -5,7 +5,7 @@ Feature: Weather information for given location
     Given User is one NDTV home page
     When User expands header section
     And User clicks on weather
-    Then Weather section is opened
+    Then User is one NDTV weather section
 
   @RegressionTest
   Scenario: Selected location information

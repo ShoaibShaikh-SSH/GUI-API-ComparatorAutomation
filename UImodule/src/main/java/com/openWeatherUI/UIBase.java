@@ -16,7 +16,9 @@ public class UIBase {
 	public static WebDriver driver;
 	public static Properties prop;
 	final static String PROJECT_PATH = System.getProperty("user.dir");
-	//final static String PropertiesFilePath = null;
+
+
+
 	public WebDriver getDriver() throws IOException {
 		prop=new Properties();
 		FileInputStream fis=new FileInputStream( PROJECT_PATH +"/src/test/java/com/resources/UI.properties");
@@ -37,13 +39,5 @@ public class UIBase {
   		driver.get(prop.getProperty("url"));
 		driver.manage().window().maximize();
    	 	return driver;
-		
-	}
-	public Properties setProperties()throws IOException
-	{
-		prop=new Properties();
-		FileInputStream fis=new FileInputStream("src/test/resources/global.properties");
-		prop.load(fis);
-		return prop;
 	}
 }

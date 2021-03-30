@@ -5,14 +5,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import java.util.List;
-import java.util.Properties;
 
 public class ndtvHome
 {
 	public WebDriver driver;
-	String xpathPart1 ;
-	String xpathPart2 ;
-	String fullPath;
+	String xpathPartOne ;
+	String xpathPartTwo ;
 
 
 	public ndtvHome(WebDriver driver)
@@ -45,11 +43,9 @@ public class ndtvHome
 	public WebElement getSearchedLocation(String cityName) { return driver.findElement(By.id(cityName)); }
 	public WebElement getSearchedLocationOnMap(String cityName)
 	{
-		xpathPart1 = "//div[@class='cityText'][text()='";
-		xpathPart2 = "']";
-		fullPath = xpathPart1+cityName+xpathPart2;
-		System.out.println("xpath: "+fullPath);
-		return driver.findElement(By.xpath(fullPath));
+		xpathPartOne = "//div[@class='cityText'][text()='";
+		xpathPartTwo = "']";
+		return driver.findElement(By.xpath(xpathPartOne+cityName+xpathPartTwo));
 	}
 	public List<WebElement> getSearchedLocationInformationOnMap() { return driver.findElements(SearchedLocationInformationOnMap); }
 }
