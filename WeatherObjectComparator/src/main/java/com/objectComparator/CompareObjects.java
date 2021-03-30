@@ -1,11 +1,7 @@
 package com.objectComparator;
 
-
 import DataModel.WeatherPoJo;
-
-import java.io.IOException;
 import java.text.DecimalFormat;
-
 
 public class CompareObjects
 {
@@ -13,8 +9,7 @@ public class CompareObjects
     double temperatureFromAPI;
     DecimalFormat decimalFormat;
 
-    public CompareObjects() throws IOException {
-    }
+    public CompareObjects() { }
 
     public double compareTemperatureAttribute(WeatherPoJo objectAPI, WeatherPoJo objectUI)
     {
