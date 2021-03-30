@@ -26,14 +26,11 @@ public class CompareObjectsTest extends CompareObjects {
         FileInputStream fis=new FileInputStream("src/test/resources/comparator.properties");
         prop.load(fis);
         double difference=0;
-        try {
-            difference = compareTemperatureAttribute(new WeatherObjectCreator().getWeatherInfoByName(), new WeatherObjectCreatorUI().getWeatherInfoByNameonUI());
-        }
+
+        try { difference = compareTemperatureAttribute(new WeatherObjectCreator().getWeatherInfoByName(), new WeatherObjectCreatorUI().getWeatherInfoByNameonUI()); }
         catch (Exception e){e.printStackTrace();}
-        if(difference==0)
-        {
-            System.out.println("The temperature value from UI is same as temperature value from API");
-        }
+
+        if(difference==0) { System.out.println("The temperature value from UI is same as temperature value from API"); }
         else
         {
             System.out.println("Temerature variance is : "+difference);

@@ -30,12 +30,12 @@ public class WeatherByCityNameTest extends APIBase
     {
         testProperties = initApiProperties();
 
-        HashMap<String,String> queryParams = new HashMap<>();
-        queryParams.put(testProperties.getProperty("cityKey"),testProperties.getProperty("city"));
-        queryParams.put(testProperties.getProperty("AppIdKey"),testProperties.getProperty("AppIdValue"));
-        queryParams.put(testProperties.getProperty("units"),testProperties.getProperty("imperial"));
+//        HashMap<String,String> queryParams = new HashMap<>();
+//        queryParams.put(testProperties.getProperty("cityKey"),testProperties.getProperty("city"));
+//        queryParams.put(testProperties.getProperty("AppIdKey"),testProperties.getProperty("AppIdValue"));
+//        queryParams.put(testProperties.getProperty("units"),testProperties.getProperty("imperial"));
 
-        response = weatherRequests.getWeatherByStatus(queryParams);
+        response = weatherRequests.getWeatherByStatus(getQueryParamMap());
 
         validatableResponse =
                 response
