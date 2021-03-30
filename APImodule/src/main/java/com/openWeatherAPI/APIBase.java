@@ -1,3 +1,5 @@
+/* This file is supposed to act as base for all the API activities (Test cases/Request Factory/etc)*/
+
 package com.openWeatherAPI;
 
 import DataCreationFromModel.WeatherObjectCreator;
@@ -16,10 +18,11 @@ public class APIBase
     public static Response response;
     public static ValidatableResponse validatableResponse;
 
+    /*instantiating POJO class & Object Creator (for Comparator)*/
     public static WeatherPoJo weatherObjectFromAPI = new WeatherPoJo();
     public static WeatherObjectCreator objCreater = new WeatherObjectCreator();
 
-
+    /*Setting base URI through constructor*/
     public void APIBase()
     {
         baseURI = "http://api.openweathermap.org/data/2.5";

@@ -11,9 +11,7 @@ public class stepDefinationsBase extends UIBase
 {
     UIBase base = new UIBase();
     WebDriver localDriver = base.getDriver();
-
     ndtvHome homepage = new ndtvHome(localDriver);
-
     public static String temperatureFromUI;
 
     public stepDefinationsBase() throws IOException
@@ -51,16 +49,20 @@ public class stepDefinationsBase extends UIBase
             System.out.println("Location is already selected: "+homepage.getSearchedLocation(prop.getProperty("cityNameToFetchWeather")).getCssValue("checked") );
     }
 
+    /*A method that captures all the attributes of weather for given city & returns those attributes in key value pairs*/
     public HashMap<String,String> extractWeatherInfo()
     {
         HashMap<String,String> weatherInformation = new HashMap<String, String>();
         List<WebElement> weatherInformationCompleteStrings = new ArrayList<WebElement>();
+
+        /*All five weather attributes captured as from UI are added in list - each one is a string(Example: Temp in Fahrenheit:93)*/
         weatherInformationCompleteStrings = homepage.getSearchedLocationInformationOnMap();
         String[] tempStringArray=null;
         try {
 
             for (int i = 0; i < weatherInformationCompleteStrings.size(); i++)
             {
+                /*Get each item from list & split it based on character ':'*/
                 tempStringArray = weatherInformationCompleteStrings.get(i).getText().split(":");
                 weatherInformation.put(tempStringArray[0], tempStringArray[1]);
 
@@ -72,7 +74,8 @@ public class stepDefinationsBase extends UIBase
         }
         catch (Exception exception){ exception.printStackTrace(); }
 
-        System.out.println("\n Weather information on NDTV-Weather section");
+        System.out.println("Weather information on NDTV-Weather section");
+        /*Print all the weather attributes that are stored in Key-Value format*/
         weatherInformation.entrySet().forEach(entry -> { System.out.println(entry.getKey() + " " + entry.getValue()); });
 
         return weatherInformation;

@@ -27,6 +27,8 @@ public class WeatherByCityNameTest extends APIBase
     public void getWeatherInfoByNameTest() throws IOException
     {
         testProperties = initApiProperties();
+
+        /*A call to Request factory method with Query param map as argument - This returns a response*/
         response = weatherRequests.getWeatherByStatus(getQueryParamMap());
 
         validatableResponse =
@@ -35,6 +37,8 @@ public class WeatherByCityNameTest extends APIBase
                         .assertThat()
                         .statusCode(200);
 
+        /*Assertion on city ID
+        * ExpectedIDforGivenCity (from properties) Vs Actual ID extracted from response*/
         Assertions.assertEquals(testProperties.getProperty("ExpectedIDforGivenCity"), JsonPath.read(response.asString(), "$.id").toString());
     }
 
