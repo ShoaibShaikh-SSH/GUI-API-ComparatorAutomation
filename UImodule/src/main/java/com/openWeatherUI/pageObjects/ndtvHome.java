@@ -19,7 +19,7 @@ public class ndtvHome
 	{
 		this.driver=driver;
 
-		// Explicit wait - This will be applied case to case basis on individual web elements, It provides a more flexible & intelligent way to wait.
+		/* Explicit wait - This will be applied case to case basis on individual web elements, It provides a more flexible & intelligent way to wait.*/
 		webElementWait =new WebDriverWait(driver, 20);
 	}
 

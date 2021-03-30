@@ -2,6 +2,7 @@ package DataCreationFromModel;
 
 import DataModel.WeatherPoJo;
 
+/*A Class that creates & returns an object of type Weather using Weather POJO*/
 public class WeatherObjectCreator
 {
     public static WeatherPoJo temperatureObject;
