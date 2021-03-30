@@ -4,9 +4,7 @@ import DataCreationFromModel.WeatherObjectCreator;
 import DataModel.WeatherPoJo;
 import io.restassured.response.Response;
 import io.restassured.response.ValidatableResponse;
-
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Properties;
@@ -26,6 +24,7 @@ public class APIBase
     {
         baseURI = "http://api.openweathermap.org/data/2.5";
     }
+
     public Properties initApiProperties() throws IOException
     {
         Properties prop=new Properties();

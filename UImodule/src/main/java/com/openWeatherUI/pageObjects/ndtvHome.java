@@ -18,6 +18,8 @@ public class ndtvHome
 	public ndtvHome(WebDriver driver)
 	{
 		this.driver=driver;
+
+		// Explicit wait - This will be applied case to case basis on individual web elements, It provides a more flexible & intelligent way to wait.
 		webElementWait =new WebDriverWait(driver, 20);
 	}
 
@@ -32,7 +34,6 @@ public class ndtvHome
 	By LocationSearchBox=By.xpath("//div[@class='searchContainer']//input[@id='searchBox']");
 
 	By SearchedLocationInformationOnMap=By.xpath("//span[@class='heading']/b");
-
 
 
 	public WebElement getSubHeader() { return driver.findElement(moreHeader); }

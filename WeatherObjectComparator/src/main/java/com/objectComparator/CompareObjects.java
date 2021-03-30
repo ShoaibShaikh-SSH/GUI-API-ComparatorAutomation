@@ -1,9 +1,7 @@
 package com.objectComparator;
 
 import DataModel.WeatherPoJo;
-
 import java.text.DecimalFormat;
-
 
 public class CompareObjects
 {

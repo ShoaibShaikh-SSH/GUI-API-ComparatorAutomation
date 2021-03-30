@@ -8,9 +8,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
-
 import java.io.IOException;
-import java.util.HashMap;
 import java.util.Properties;
 
 public class WeatherByCityNameTest extends APIBase
@@ -29,12 +27,6 @@ public class WeatherByCityNameTest extends APIBase
     public void getWeatherInfoByNameTest() throws IOException
     {
         testProperties = initApiProperties();
-
-//        HashMap<String,String> queryParams = new HashMap<>();
-//        queryParams.put(testProperties.getProperty("cityKey"),testProperties.getProperty("city"));
-//        queryParams.put(testProperties.getProperty("AppIdKey"),testProperties.getProperty("AppIdValue"));
-//        queryParams.put(testProperties.getProperty("units"),testProperties.getProperty("imperial"));
-
         response = weatherRequests.getWeatherByStatus(getQueryParamMap());
 
         validatableResponse =

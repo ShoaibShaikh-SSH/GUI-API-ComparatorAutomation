@@ -1,10 +1,8 @@
 package com.requestFactory;
 
-import io.restassured.http.ContentType;
+
 import io.restassured.response.Response;
-
 import java.util.HashMap;
-
 import static io.restassured.RestAssured.given;
 
 

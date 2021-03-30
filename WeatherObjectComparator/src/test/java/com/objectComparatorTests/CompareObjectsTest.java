@@ -11,13 +11,12 @@ import java.util.Properties;
 
 import static org.junit.jupiter.api.Assertions.fail;
 
-public class CompareObjectsTest extends CompareObjects {
-
+public class CompareObjectsTest extends CompareObjects
+{
     public CompareObjectsTest() throws IOException { }
 
     public static Properties prop;
     double magnitudeOfVariance ;
-
 
     @Test
     public void objectComparisonTest() throws Throwable
@@ -39,7 +38,5 @@ public class CompareObjectsTest extends CompareObjects {
             if(difference>magnitudeOfVariance)
             fail("Temperature variance is outside permissible limit");
         }
-
-
     }
 }

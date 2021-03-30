@@ -3,7 +3,6 @@ package com.openWeatherUI;
 import com.openWeatherUI.pageObjects.ndtvHome;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.*;
@@ -14,7 +13,6 @@ public class stepDefinationsBase extends UIBase
     WebDriver localDriver = base.getDriver();
 
     ndtvHome homepage = new ndtvHome(localDriver);
-    //ndtvWeather Weather = new ndtvWeather(localDriver);
 
     public static String temperatureFromUI;
 
@@ -69,12 +67,12 @@ public class stepDefinationsBase extends UIBase
                 if (tempStringArray[0].equalsIgnoreCase("Temp in Fahrenheit"))
                 {
                     temperatureFromUI = tempStringArray[1];
-                    System.out.println("Temp captured from UI: " + temperatureFromUI);
                 }
             }
         }
         catch (Exception exception){ exception.printStackTrace(); }
 
+        System.out.println("\n Weather information on NDTV-Weather section");
         weatherInformation.entrySet().forEach(entry -> { System.out.println(entry.getKey() + " " + entry.getValue()); });
 
         return weatherInformation;

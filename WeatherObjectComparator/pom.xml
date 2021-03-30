@@ -12,8 +12,6 @@
     <groupId>com.WeatherObjectComparator.base</groupId>
     <artifactId>WeatherObjectComparator</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <!--packaging>jar</packaging -->
-
 
     <properties>
 
@@ -118,11 +116,7 @@
                         <artifactId>junit-platform-surefire-provider</artifactId>
                         <version>1.1.0</version>
                     </dependency>
-                    <dependency>
-                        <groupId>org.junit.jupiter</groupId>
-                        <artifactId>junit-jupiter-engine</artifactId>
-                        <version>5.1.0</version>
-                    </dependency>
+
                 </dependencies>
             </plugin>
         </plugins>

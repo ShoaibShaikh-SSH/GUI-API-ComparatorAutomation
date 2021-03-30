@@ -2,14 +2,12 @@ package com.openWeatherUI;
 
 import DataCreationFromModel.WeatherObjectCreator;
 import DataModel.WeatherPoJo;
-
 import java.io.IOException;
 import java.util.HashMap;
 
 public class WeatherObjectCreatorUI
 {
-    public WeatherObjectCreatorUI() throws IOException {
-    }
+    public WeatherObjectCreatorUI() { }
 
     public static WeatherObjectCreator objCreater = new WeatherObjectCreator();
     public static stepDefinationsBase UIstep;
@@ -18,7 +16,8 @@ public class WeatherObjectCreatorUI
     public WeatherPoJo getWeatherInfoByNameonUI() throws Throwable
     {
         double temperatureFromUI = 0.0;
-        try {
+        try
+        {
             UIstep = new stepDefinationsBase();
             HashMap<String, String> weatherInformationfromMapUI = new HashMap<String, String>();
 
@@ -28,9 +27,10 @@ public class WeatherObjectCreatorUI
             UIstep.searchLocation();
             UIstep.checkIfLocationSelected();
             UIstep.ClickgivenLocationOnMap();
+
             weatherInformationfromMapUI = UIstep.GetInformationOfGivenLocationOnMap();
             temperatureFromUI = Double.parseDouble(weatherInformationfromMapUI.get("Temp in Fahrenheit"));
-            System.out.println("Temperature from UI: " + temperatureFromUI);
+
             UIstep.closeTheSession();
         }
         catch(Exception exception){exception.printStackTrace();}
