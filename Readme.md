@@ -1,3 +1,6 @@
+**Note:**
+Please refer master branch for a stable code base. Other branches are for new addition / Code refactoring purpose only.
+
 # Weather Reporting Comparator
 
 This is a multi module weather comparator project to compare weather attributes extracted from UI with API. The project has separate layers to independently run Automated test on UI as well as API. Executing the complete project does following,
